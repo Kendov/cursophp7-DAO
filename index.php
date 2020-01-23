@@ -1,11 +1,17 @@
 <?php
 require_once('config.php');
 
-$sql = new Sql("localhost","dbphp7","root", "");
+//old version
+// $sql = new Sql("localhost","dbphp7","root", "");
+// $usuarios = $sql->select("SELECT * FROM tb_usuarios");
+// echo json_encode($usuarios);
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$root = new Usuario;
+$root->loadByid(1);
+echo $root;
 
-echo json_encode($usuarios);
+
+
 
 
 ?>
